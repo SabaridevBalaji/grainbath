@@ -1,0 +1,25 @@
+body{
+    background-color:#121212;
+    color:#e0e0e0;
+    font-family:'Courier New',Courier,monospace;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+    margin:0;
+
+}
+.container{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:6px;
+    border:1px solid #333;
+    width:100%;
+    max-width:800px;
+
+}
+h1{
+    margin-top:0;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    border-bottom:1px solid #333;
+}
