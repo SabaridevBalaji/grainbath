@@ -48,7 +48,7 @@ input[type="file"]::file-selector-button{
     text-transform:uppercase;
     cursor:pointer;
     transition:0.2s ease;
-    
+
 }
 .controls{
     display:flex;
@@ -113,4 +113,44 @@ button{
 }
 button:hover{
     background:#ffffff;
+}
+#output{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+.slice-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+    background:#252525;
+    padding:10px;
+    border:1px solid #333333;
+    width:calc(50%-10px);
+    box-sizing:border-box;
+}
+.slice-container img{
+    max-width:100%;
+    height:auto;
+    border:1px solid #111111;
+
+}
+.download-link{
+    color:#121212;
+    text-decoration:none;
+    background:#e0e0e0;
+    padding:8px 12px;
+    font-size:0.9rem;
+    font-weight:bold;
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+    transition:0.2s ease;
+
+}
+.download-link:hover{
+    background:#ffffff;
+    
 }
