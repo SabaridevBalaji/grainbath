@@ -11,6 +11,19 @@
             <h1>grainbath</h1>
             <input type="file" id="upload" multiple accept="image/*">
 
+        <div class="controls">
+            <div class="slider-group">
+                <label for="grain">Grain Intensity</label>
+                <input type="range" id="grain" min="0" max="100" value="0">
+
+            </div>
+            <div class="slider-group">
+                <label for="slices">Carousel Slices</label>
+                <input type="number" id="slices" min="1" max="10" value="1">
+
+            </div>
+            <button id="processBtn">Slice & Export</button>
+        </div>
         </div>
         <script src="script.js"></script>
     </body>
