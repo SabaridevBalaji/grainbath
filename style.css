@@ -37,3 +37,40 @@ input[type="file"]{
     margin-bottom:20px;
     
 }
+.controls{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-bottom:30px;
+
+}
+.slider-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+input[type="number"]{
+    background:#252525;
+    color:#ffffff;
+    border:1px solid #444444;
+    padding:10px;
+    font-family:inherit;
+
+}
+button{
+    cursor:pointer;
+    background:#e0e0e0;
+    color:#121212;
+    font-weight:bold;
+    font-family:inherit;
+    border:none;
+    padding:12px;
+    transition:0.2s ease;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-top:10px;
+
+}
+button:hover{
+    background:#ffffff;
+}
