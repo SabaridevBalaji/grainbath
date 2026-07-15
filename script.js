@@ -9,6 +9,9 @@ processBtn.addEventListener('click',async()=>{
     output.innerHTML='';
     currentZip=new JSZip();
     const grainAmount=parseInt(grainSlider.value);
+    const b=document.getElementById('brightness').value;
+    const c =  document.getElementById('contrast').value;
+    const s =document.getElementById('saturation').value;
     const slices=parseInt(slicesInput.value);
     for(let file of files){
         const img=await loadImage(file);
@@ -20,7 +23,9 @@ processBtn.addEventListener('click',async()=>{
             const ctx=canvas.getContext('2d');
             canvas.width=sliceWidth;
             canvas.height=sliceHeight;
+            ctx.filter=`brightness(${b}%) contrast(${c}%) saturate(${s}%)`;
             ctx.drawImage(img, i*sliceWidth,0,sliceWidth,sliceHeight,0,0,sliceWidth,sliceHeight);
+             
             if(grainAmount >0){
                 const imgData=ctx.getImageData(0,0,canvas.width,canvas.height);
                 const data=imgData.data;
