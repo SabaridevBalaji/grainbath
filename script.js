@@ -40,6 +40,7 @@ processBtn.addEventListener('click',async()=>{
             currentZip.file(fileName,base64Data,{base64:true});
             const wrapper=document.createElement('div');
             wrapper.className='slice-container';
+            if(slices===1) wrapper.classList.add('single');
 
             const previewNode=document.createElement('img');
             previewNode.src=dataUrl;

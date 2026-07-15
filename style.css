@@ -130,8 +130,24 @@ button:hover{
     padding:10px;
     border:1px solid #333333;
     box-sizing:border-box;
+    transition:transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s ease;
 
+}
+.slice-container:hover{
+    transform:scale(1.04)translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.5);
+    z-index:10;
+    position:relative;
 
+}
+
+.slice-container.single{
+    grid-column:1/-1;
+}
+.slice-container.single img{
+    height:auto;
+    max-height:60vh;
+    object-fit:contain;
 }
 .slice-container img{
     width:100%;
@@ -167,5 +183,5 @@ button:hover{
 #zipBtn:hover{
     background:#ffffff;
     color:#121212;
-    
+
 }
