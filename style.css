@@ -157,3 +157,15 @@ button:hover{
     background:#ffffff;
 
 }
+
+#zipBtn{
+    background:#444444;
+    color:#e0e0e0;
+    margin-top:0;
+
+}
+#zipBtn:hover{
+    background:#ffffff;
+    color:#121212;
+    
+}
