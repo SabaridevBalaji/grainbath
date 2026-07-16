@@ -8,9 +8,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     </head>
-    <body>
-        <div class="container">
-            <h1>grainbath</h1>
+<body>
+    <header class="app-header">
+        <h1>grainbath</h1>
+    </header>
+    <div class="workspace">
+        <div class="panel panel-controls">
             <input type="file" id="upload" multiple accept="image/*">
             <div class="slider-group">
                 <label for="ratio">Slice Aspect Ratio</label>
@@ -19,18 +22,13 @@
                     <option value="0.8">4:5 (IG Portrait)</option>
                     <option value="1">1:1 (IG Square)</option>
                     <option value="1.7778">16:9(Landscape)</option>
-                </select>
-            </div>
-        <div class="controls">
-            <div class="slider-group">
-                <label for="grain">Grain Intensity</label>
-                <input type="range" id="grain" min="0" max="100" value="0">
 
+                </select>
             </div>
             <div class="slider-group">
                 <label for="brightness">Brightness</label>
                 <input type="range" id="brightness" min="0" max="200" value="100">
-                
+
             </div>
             <div class="slider-group">
                 <label for="contrast">Contrast</label>
@@ -40,23 +38,41 @@
             <div class="slider-group">
                 <label for="saturation">Saturation</label>
                 <input type="range" id="saturation" min="0" max="200" value="100">
+
+            </div>
+            <div class="slider-group">
+                <label for="grain">Grain Intensity</label>
+                <input type="range" id="grain" min="0" max="100" value="0">
             </div>
             <div class="slider-group">
                 <label for="slices">Carousel Slices</label>
                 <input type="number" id="slices" min="1" max="10" value="1">
-
             </div>
-            <button id="processBtn">Slice & Export</button>
-            <button id="zipBtn" style="display:none;">DOWNLOAD ALL (ZIP)</button>
+            <button id="processBtn">SLICE & EXPORT</button>
+            <button id="zipBtn" style="display:none;">DOWNLOAD ALL(ZIP)</button>
         </div>
-        <div id="output"></div>
-        </div>
-        <div id="ig-preview-section" style="display:none;">
-            <h2 style="font-size:1.2rem; margin-bottom:20px;text-transform:uppercase;letter-spacing:2px;">IG Swipe Preview</h2>
+        <div class="panel panel-preview">
+            <div class="preview-section">
+                <div class="section-label">Live Edit Preview</div>
+                <canvas id="live-canvas"></canvas>
+            </div>
+        <div class="preview-section" id="ig-preview-section" style="display:none;">
+            <div class="section-label">IG Swipe Simulator</div>
             <div class="phone-mockup">
-                <div id="ig-slider"></div>
+                <div class="ig-header">
+                    <div class="ig-avatar"></div>
+                    <div class="ig-username">user46</div>
+                    <div class="ig-dots">⋮</div>
+
+                </div>
+                <div id="ig-slider"></div
+                    >
             </div>
+
         </div>
-        <script src="script.js"></script>
-    </body>
+        </div>
+    </div>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
 </html>
