@@ -15,8 +15,25 @@ processBtn.addEventListener('click',async()=>{
     const slices=parseInt(slicesInput.value);
     for(let file of files){
         const img=await loadImage(file);
-        const sliceWidth=img.width/slices;
-        const sliceHeight=img.height;
+        const ratioVal= document.getElementById('ratio').value;
+        let cropX=0, cropY=0,cropW=img.width, cropH=img.height;
+        if(ratioVal !== 'auto'){
+            const targetSliceRatio=parseFloat(ratioVal);
+            const targetTotalRatio=targetSliceRatio*slices;
+            const imgRatio=img.width/img.height;
+            if(imgRatio> targetTotalRatio){
+                cropH=img.height;
+                cropW=cropH*targetTotalRatio;
+                cropX=(img.width - cropW)/2;
+
+            }else{
+                cropW= img.width;
+                cropH= cropW/targetTotalRatio;
+                cropY= (img.height- cropH)/2;
+            }
+        }
+        const sliceWidth= cropW/slices;
+        const sliceHeight=cropH;
         const baseName=file.name.split('.')[0];
         for(let i=0;i<slices;i++){
             const canvas=document.createElement('canvas');
@@ -24,7 +41,7 @@ processBtn.addEventListener('click',async()=>{
             canvas.width=sliceWidth;
             canvas.height=sliceHeight;
             ctx.filter=`brightness(${b}%) contrast(${c}%) saturate(${s}%)`;
-            ctx.drawImage(img, i*sliceWidth,0,sliceWidth,sliceHeight,0,0,sliceWidth,sliceHeight);
+            ctx.drawImage(img, cropX+(i*sliceWidth),cropY, sliceWidth, sliceHeight,0,0,sliceWidth,sliceHeight);
              
             if(grainAmount >0){
                 const imgData=ctx.getImageData(0,0,canvas.width,canvas.height);

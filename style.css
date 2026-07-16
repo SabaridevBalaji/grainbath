@@ -62,13 +62,18 @@ input[type="file"]::file-selector-button{
     flex-direction:column;
     gap:8px;
 }
-input[type="number"]{
+input[type="number"], select{
     background:#252525;
     color:#ffffff;
     border:1px solid #444444;
     padding:10px;
     font-family:inherit;
 
+}
+
+select:focus{
+    outline:none; 
+    border-color:#888888;
 }
 input[type="range"]{
     -webkit-appearance:none;

@@ -12,7 +12,15 @@
         <div class="container">
             <h1>grainbath</h1>
             <input type="file" id="upload" multiple accept="image/*">
-
+            <div class="slider-group">
+                <label for="ratio">Slice Aspect Ratio</label>
+                <select id="ratio">
+                    <option value="auto">Original (Auto)</option>
+                    <option value="0.8">4:5 (IG Portrait)</option>
+                    <option value="1">1:1 (IG Square)</option>
+                    <option value="1.7778">16:9(Landscape)</option>
+                </select>
+            </div>
         <div class="controls">
             <div class="slider-group">
                 <label for="grain">Grain Intensity</label>
