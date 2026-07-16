@@ -190,3 +190,45 @@ button:hover{
     color:#121212;
 
 }
+
+#ig-preview-section{
+    margin-top:50px;
+    border-top:1px solid #333333;
+    padding-top:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+.phone-mockup{
+    width:350px;
+    background:#000000;
+    border:14px solid #1a1a1a;
+    border-radius:36px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.8),inset 0 0 0 2px #333333;
+    overflow:hidden;
+    position:relative;
+
+}
+
+#ig-slider{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+
+}
+
+#ig-slider::webkit-scrollbar{
+    display:none;
+
+}
+
+#ig-slider img{
+    flex:0 0 100%;
+    width:100%;
+    height:auto;
+    display:block;
+    scroll-snap-align:center;
+
+}

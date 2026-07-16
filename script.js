@@ -4,6 +4,8 @@ const slicesInput=document.getElementById('slices');
 const zipBtn=document.getElementById('zipBtn');
 let currentZip=null;
 processBtn.addEventListener('click',async()=>{
+    const igSlider=document.getElementById('ig-slider');
+    igSlider.innerHTML='';
     const files=upload.files;
     if(files.length===0)return;
     output.innerHTML='';
@@ -75,10 +77,14 @@ processBtn.addEventListener('click',async()=>{
             wrapper.appendChild(previewNode);
             wrapper.appendChild(link);
             output.appendChild(wrapper);
+            const igImg=document.createElement('img');
+            igImg.src=dataUrl;
+            igSlider.appendChild(igImg);
 
         }
     }
     zipBtn.style.display='block';
+    document.getElementById('ig-preview-section').style.display='flex';
 
 });
 zipBtn.addEventListener('click',()=>{
