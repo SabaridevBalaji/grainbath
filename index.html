@@ -49,27 +49,28 @@
                 <input type="number" id="slices" min="1" max="10" value="1">
             </div>
             <button id="processBtn">SLICE & EXPORT</button>
-            <button id="zipBtn" style="display:none;">DOWNLOAD ALL(ZIP)</button>
+            
         </div>
-        <div class="panel panel-preview">
-            <div class="preview-section">
-                <div class="section-label">Preview</div>
-                <canvas id="live-canvas"></canvas>
-            </div>
-        <div class="preview-section" id="ig-preview-section" style="display:none;">
-            <div class="section-label">IG Swipe Simulator</div>
-            <div class="phone-mockup">
-                <div class="ig-header">
-                    <div class="ig-avatar"></div>
-                    <div class="ig-username">user46</div>
-                    <div class="ig-dots">⋮</div>
+        <div class="panel panel-monitor">
+            <div class="section-label"></div>
+            <div class="canvas-wrapper">
+                    <canvas id="live-canvas" style="max-width:100%; max-height:65vh; border:1px solid #222222; box-shadow:0 10px 30px rgba(0,0,0,0.5);"></canvas>
 
+            </div>
+        </div>
+        <div class="panel panel-export">
+            <div class="section-label">How your post will look like in Instagram</div>
+            <div id="ig-preview-section" style="display:none; flex-direction:column; gap:20px">
+                <div class="phone-mockup">
+                    <div class="ig-header">
+                        <div class="ig-avatar"></div>
+                        <div class="ig-username">iloveminecraft</div>
+                        <div class="ig-dots">⋮</div>
+                    </div>
+                    <div id="ig-slider"></div>
                 </div>
-                <div id="ig-slider"></div
-                    >
+                <button ig="zipBtn" style="display:none;">DOWNLOAD ALL(ZIP)</button>
             </div>
-
-        </div>
         </div>
     </div>
     <div id="output"></div>
