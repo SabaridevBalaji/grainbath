@@ -15,11 +15,12 @@ body{
 
 }
 .workspace{
-    display:flex;
-    gap:30px;
-    align-items:flex-start;
-    max-width:1400px;
+    display:grid;
+    grid-template-columns:320px 1fr 380px;
+    align-items:start;
     margin:0 auto;
+    max-width:1600px;
+    gap:25px;
 
 }
 .panel{
@@ -132,6 +133,7 @@ button{
     box-sizing:border-box;
     
 
+
 }
 
 button:hover{
@@ -164,7 +166,7 @@ button:hover{
     align-items:center;
     padding:12px 15px;
     background:#000000;
-    border-bottom:1px soid #222222;
+    border-bottom:1px solid #222222;
 
 }
 .ig-avatar{
@@ -220,14 +222,15 @@ button:hover{
 
 }
 .slice-container{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    align-items:center;
-    background:#1a1a1a;
-    padding:10px;
-    border:1px solid #333333;
-    transition:transform 0.2s ease,box-shadow 0.2s ease;
+   display:flex;
+   flex-direction:column;
+   gap:10px;
+   align-items:center;
+   background:#1a1a1a;
+   padding:10px;
+   border:1px solid #333333;
+   width:180px;
+   transition:transform 0.2s ease,box-shadow 0.2s ease;
 
 }
 .slice-container:hover{
@@ -241,11 +244,9 @@ button:hover{
 }
 .slice-container img{
     width:100%;
-    height:auto;
-    max-height:400px;
-    object-fit:contain;
+    height:150px;
+    object-fit:cover;
     border:1px solid #111111;
-
 }
 .download-link{
     background:#e0e0e0;
